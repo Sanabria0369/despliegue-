@@ -1,0 +1,16 @@
+<h2>Resultado</h2>
+<p>Clasificación: <strong>{{ resultado }}</strong></p>
+<canvas id="grafico"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+new Chart(document.getElementById('grafico'), {
+    type: 'pie',
+    data: {
+        labels: ['Phishing', 'Legítimo'],
+        datasets: [{
+            data: [{{ phishing }}, {{ legitimo }}]
+        }]
+    }
+});
+</script>
+<a href="/">Analizar otro</a>
